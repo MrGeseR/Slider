@@ -1,11 +1,7 @@
-'use strict';
-
-var col = 0;
-
-for(let i=1;i<12;i++) {
-    $('.slider').append('<div class="slider__element"><img alt="" src="img/'+i+'.jpg" id="'+i+'"></div>');
-}
-var sliding = function(){
+var sliding = function(num,time){
+    for(let i=1;i<num;i++) {
+        $('.slider').append('<div class="slider__element"><img alt="" src="img/'+i+'.jpg" id="'+i+'"></div>');
+    }
     var slides = $(".slider").children(".slider__element");
     var width = $(".slider").width();
     var i = slides.length;
@@ -31,5 +27,10 @@ var sliding = function(){
             $(".slider").css("transform","translate3d(-"+offset+"px, 0px, 0px)");
         }
     });
+    setInterval(function(){
+        $(".wrapper__rightArrow").trigger('click');
+    }, time);
+
 };
-sliding();
+
+sliding (12, 6000);
