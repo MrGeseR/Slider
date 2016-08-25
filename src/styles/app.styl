@@ -3,40 +3,55 @@ body
   padding 0
 
 img
-  max-width 100%
-  max-height 100%
-  display block
+  width 100%
+  //max-height 100%
 
-.slider
+.wrapper
+  width 1300px
+  height 800px
+  overflow hidden
   margin 0 auto
   position relative
-  width 80%
   border 2px dotted greenyellow
-  height 220px
-  &__element
-    display block
-    float left
-    padding 10px 10px 10px 0
-    width 31000px
-    height 200px
   &__leftArrow
     display inline-block
     font-size 100px
     position absolute
     left 10 px
+    color yellow
     opacity 0.8
-    line-height 220px
+    line-height 800px
+    z-index 100
+    cursor:pointer
     &:hover
       color red
   &__rightArrow
     display inline-block
     font-size 100px
+    color yellow
     position absolute
     right 10 px
     opacity 0.8
-    line-height 220px
+    line-height 800px
+    z-index 100
+    cursor:pointer
     &:hover
       color red
+
+.slider
+  //margin 0 auto
+  position relative
+  //width 10000px
+  height 220px
+  transition 1s
+  &__element
+    text-align center
+    display block
+    float left
+    padding 10px
+    width 1280px
+    height 800px
+    //margin 5px 12px
 
 
 .mainHeader
